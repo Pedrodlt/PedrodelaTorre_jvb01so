@@ -23,11 +23,17 @@ public class Main {
         }
 
         //Mostramos a las personas que tengan más de 30 años
+        //para controlar con bandera
+        boolean noHay = false;
         System.out.println("Personas con más de 30 años: ");
         for (int i = 0; i < personas.length; i++) {
             if(personas[i].getEdad()>30){
                 System.out.println("El nombre es: "+personas[i].getNombre()+ " y su edad es: "+personas[i].getEdad());
+                noHay=true;
             }
+        }
+        if (noHay==false){
+            System.out.println("No hay personas mayor de 30.");
         }
     }
 }
